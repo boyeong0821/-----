@@ -1,0 +1,212 @@
+@import './font.css';
+@import './reset.css';
+@import './common.css';
+
+/* cursor */
+.cursor{
+    position: fixed;
+    top: -20px;
+    left: -20px;
+    pointer-events: none;
+    z-index: 99;
+}
+.cursor .content{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffffff 0%, #e3f660 100%);
+    transition: .5s;
+}
+.cursor.on .content{
+    filter: blur(1px);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    transform: scale(1.5);
+}
+
+/* header */
+#header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+#header.fix{
+    top: -80px;
+    transition: .5s;
+}
+#header.fix.show{
+    transform: translateY(100%);
+}
+
+#header .header-inner{
+    padding: 0 50px;
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header .logo{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+#header .logo a{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+#header .logo a::after{
+    position: absolute;
+    top: 37px;
+    right: 5px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50px;
+    background: #e3f660;
+    content: '';
+}
+
+#header .gnb{
+    height: 100%;
+}
+#header .gnb .menu-list{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#header .gnb .menu-item a{
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 30px;
+    border: 1px solid #00030033;
+    transition: .5s;
+}
+#header .gnb .menu-item a:hover{
+    border-color: #000300;
+}
+
+
+/* footer */
+#footer{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+#footer::after{
+    position: absolute;
+    top: 45%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    border-radius: 100%;
+    background: radial-gradient(circle, rgba(227, 246, 96, 0.8) 10%, rgba(255, 255, 255, 0) 50%);
+    z-index: -1;
+    content: '';
+}
+#footer .footer-inner{
+    padding: 0 50px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#footer .text-wrap{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#footer .text-wrap .headline{
+    padding: 10px;
+    overflow: hidden;
+}
+#footer .text-wrap .headline .text{
+    font-size: clamp(32px,11vw,150px);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -2px;
+    text-align: center;
+    white-space: nowrap;
+    transform: translateY(150%);
+    transition: transform 1s;
+}
+#footer.active .text-wrap .headline .text{
+    transform: translateY(0);
+}
+
+#footer .text-wrap .goal{
+    margin-top: 20px;
+    padding: 10px;
+    overflow: hidden;
+}
+#footer .text-wrap .goal .text{
+    width: 50vw;
+    margin: 0 auto;
+    font-family: 'pretendard';
+    font-size: 17px;
+    font-weight: 500;
+    transform: translateY(200%);
+    transition: transform 1s .5s;
+}
+#footer.active .text-wrap .goal .text{
+    transform: translateY(0);
+}
+
+#footer .contact-area .contact-item{
+    padding: 20px 10px;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px solid #00030033;
+}
+#footer .contact-area .contact-item small{
+    font-weight: 600;
+}
+#footer .contact-area .contact-item:first-child .contact{
+    margin-left: 100px;
+}
+#footer .contact-area .contact-item:last-child .contact{
+    margin-left: 80px;
+}
+#footer .contact-area .contact-item .contact{
+    position: relative;
+    overflow: hidden;
+}
+#footer .contact-area .contact-item .contact span{
+    display: block;
+    font-size: 36px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: .5s;
+}
+#footer .contact-area .contact-item .contact span:last-child{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+}
+#footer .contact-area .contact-item .contact:hover span{
+    transform: translateY(-100%);
+}
+#footer .contact-area .contact-item .contact:hover span:last-child{
+    transform: translateY(0);
+}
+
+#footer .copyright{
+    display: block;
+    margin: 20px 0;
+    font-size: 14px;
+}

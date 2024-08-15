@@ -1,0 +1,191 @@
+/* 메인페이지 */
+
+/* sc-home */
+.sc-home{
+    position: relative;
+    height: 100vh;
+}
+.sc-home .text-wrap{
+    padding: 30vh 40px 40px;
+}
+
+.sc-home .text-wrap .headline{
+    padding: 10px;
+    overflow: hidden;
+}
+.sc-home .text-wrap .headline .text{
+    font-size: clamp(24px,8vw,120px);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -1px;
+    white-space: nowrap;
+}
+
+.sc-home .text-wrap .headline-top .text{
+    transform: translateY(200%);
+    transition: transform 1s;
+}
+.sc-home .text-wrap .headline-top .text.active{
+    transform: translateY(0);
+}
+.sc-home .text-wrap .headline-bottom .text{
+    transform: translateY(200%);
+    transition: transform 1s;
+}
+.sc-home .text-wrap .headline-bottom .text.active{
+    transform: translateY(0);
+}
+
+.sc-home .text-wrap .headline .point{
+    position: relative;
+}
+.sc-home .text-wrap .headline .point::after{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 102%;
+    height: 38%;
+    background: #e3f660;
+    content: '';
+    z-index: -1;
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 2s;
+    transform-origin: center;
+}
+.sc-home .text-wrap .headline .point.active::after{
+    transform: translateX(-50%) scaleX(1);
+}
+
+.sc-home .text-wrap .date{
+    padding: 10px;
+    overflow: hidden;
+}
+.sc-home .text-wrap .date .text{
+    display: block;
+    margin-top: 2vh;
+    font-size: 18px;
+    font-weight: 600;
+    transform: translateY(150%);
+    transition: transform 1s;
+}
+.sc-home .text-wrap .date .text.active{
+    transform: translateY(0);
+}
+
+.sc-home .slide-area{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 15vh;
+    color: #fff;
+    border-radius: 50px 50px 0 0;
+    background: #000300;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.sc-home .slide-area .slide{
+    width: 200%;
+    display: flex;
+    align-items: center;
+    animation: slide 10s linear infinite;
+}
+
+.sc-home .slide-area .text{
+    position: relative;
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    margin-left: 80px;
+    white-space: nowrap;
+}
+.sc-home .slide-area .text::after{
+    position: absolute;
+    top: 50%;
+    left: -45px;
+    transform: translateY(-100%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    background: #fff;
+    content: '';
+}
+
+@keyframes slide{
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* sc-project */
+.sc-project{
+    background: #000300;
+}
+
+.sc-project .project-area{
+    border-radius: 50px 50px 0 0;
+    background: #fff;
+}
+
+.sc-project .project-area .project-list{
+    padding: 50px 0;
+}
+.sc-project .project-area .project-item{
+    padding: 50px 0;
+    border-bottom: 1px solid #00030033;
+}
+.sc-project .project-area .project-item .content{
+    padding: 0 50px;
+    display: flex;
+    gap: 20px;
+}
+.sc-project .project-area .project-item .content .title-wrap,
+.sc-project .project-area .project-item .content .text-wrap{
+    flex: 1;
+}
+
+.sc-project .project-area .title-wrap{
+    display: flex;
+    gap: 20px;
+}
+.sc-project .project-area .title-wrap .number{
+    padding-top: 10px;
+    font-weight: 600;
+}
+.sc-project .project-area .title-wrap .title{
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.sc-project .project-area .text-wrap .desc{
+    font-family: 'pretendard';
+    font-size: 18px;
+    font-weight: 500;
+}
+.sc-project .project-area .text-wrap .stack{
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.sc-project .project-area .text-wrap .link-wrap{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sc-project .project-area .text-wrap .link-wrap a{
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 30px;
+    border: 1px solid #00030033;
+    transition: .5s;
+}
+.sc-project .project-area .text-wrap .link-wrap a:hover{
+    border-color: #000300;
+}

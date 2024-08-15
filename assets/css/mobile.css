@@ -1,0 +1,204 @@
+@media (max-width:800px) {
+    #header{
+        height: 48px;
+    }
+    #header.fix{
+        top: -48px;
+    }
+    #header .header-inner{
+        padding: 0 20px;
+    }
+    #header .logo a{
+        font-size: 16px;
+    }
+    #header .logo a::after{
+        top: 21px;
+        right: 6px;
+        width: 5px;
+        height: 5px;
+    }
+    #header .gnb .menu-item a{
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .sc-home .text-wrap{
+        padding: 30vh 10px 10px;
+    }
+    .sc-home .text-wrap .headline .text{
+        line-height: 0.8;
+    }
+    .sc-home .text-wrap .date .text{
+        font-size: 16px;
+    }
+    .sc-home .slide-area{
+        height: 10vh;
+        border-radius: 30px 30px 0 0;
+    }
+    .sc-home .slide-area .text{
+        font-size: 28px;
+        letter-spacing: -1px;
+        margin-left: 60px;
+    }
+    .sc-home .slide-area .text::after{
+        left: -35px;
+        width: 9px;
+        height: 9px;
+    }
+
+    .sc-project .project-area{
+        border-radius: 30px 30px 0 0;
+    }
+    .sc-project .project-area .project-list{
+        padding: 20px 0;
+    }
+    .sc-project .project-area .project-item{
+        padding: 20px 0;
+    }
+    .sc-project .project-area .project-item .content{
+        padding: 0 20px;
+        flex-direction: column;
+        gap: 0;
+    }
+    .sc-project .project-area .title-wrap{
+        flex-direction: column;
+        gap: 0;
+    }
+    .sc-project .project-area .title-wrap .number{
+        font-size: 14px;
+    }
+    .sc-project .project-area .title-wrap .title{
+        margin-top: 10px;
+        font-size: 32px;
+    }
+    .sc-project .project-area .text-wrap .desc{
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    .sc-project .project-area .text-wrap .stack{
+        margin-top: 10px;
+        font-size: 12px;
+    }
+    .sc-project .project-area .text-wrap .link-wrap{
+        margin-top: 20px;
+        padding-bottom: 10px;
+    }
+    .sc-project .project-area .text-wrap .link-wrap a{
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    #footer .footer-inner{
+        padding: 0 20px;
+    }
+    #footer .text-wrap .headline .text{
+        line-height: 0.8;
+    }
+    #footer .text-wrap .goal{
+        margin-top: 5px;
+    }
+    #footer .text-wrap .goal .text{
+        width: 60vw;
+        font-size: 14px;
+    }
+    #footer .contact-area .contact-item{
+        padding: 10px 5px;
+    }
+    #footer .contact-area .contact-item small{
+        padding-bottom: 0;
+        font-size: 14px;
+    }
+    #footer .contact-area .contact-item:first-child .contact{
+        margin-left: 50px;
+    }
+    #footer .contact-area .contact-item:last-child .contact{
+        margin-left: 36px;
+    }
+    #footer .contact-area .contact-item .contact span{
+        font-size: 28px;
+    }
+    #footer .copyright{
+        margin: 10px 0;
+        font-size: 12px;
+    }
+}
+
+@media (max-width:500px) {
+    #header .header-inner{
+        padding: 0 10px;
+    }
+    #header .logo a{
+        font-size: 14px;
+    }
+    #header .logo a::after{
+        top: 21px;
+        right: 5px;
+        width: 4px;
+        height: 4px;
+    }
+    #header .gnb .menu-item a{
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .sc-home .slide-area{
+        border-radius: 20px 20px 0 0;
+    }
+    .sc-home .slide-area .text{
+        font-size: 22px;
+    }
+    .sc-home .slide-area .text::after{
+        width: 6px;
+        height: 6px;
+    }
+
+    .sc-project .project-area{
+        border-radius: 20px 20px 0 0;
+    }
+    .sc-project .project-area .project-list{
+        padding: 10px 0;
+    }
+    .sc-project .project-area .project-item{
+        padding: 10px 0;
+    }
+    .sc-project .project-area .project-item .content{
+        padding: 0 10px;
+    }
+    .sc-project .project-area .title-wrap .number{
+        font-size: 12px;
+    }
+    .sc-project .project-area .title-wrap .title{
+        font-size: 28px;
+    }
+    .sc-project .project-area .text-wrap .desc{
+        font-size: 13px;
+        line-height: 1.6;
+    }
+    .sc-project .project-area .text-wrap .link-wrap a{
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    #footer .footer-inner{
+        padding: 0 10px;
+    }
+    #footer .text-wrap .goal{
+        margin-top: 0;
+    }
+    #footer .text-wrap .goal .text{
+        font-size: 12px;
+    }
+    #footer .contact-area .contact-item small{
+        font-size: 12px;
+    }
+    #footer .contact-area .contact-item:first-child .contact{
+        margin-left: 30px;
+    }
+    #footer .contact-area .contact-item:last-child .contact{
+        margin-left: 16px;
+    }
+    #footer .contact-area .contact-item .contact span{
+        font-size: 18px;
+    }
+}
